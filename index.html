@@ -5,8 +5,133 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sorta App</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
-    <button type="button" class="btn btn-primary">Primary</button>
+<div class="container-fluid">
+        <div class="row side-space">
+            <!-- Sidebar --> 
+            <div class="col-md-2 sidebar d-flex flex-column align-items-start">
+                <h1 class="text-center w-100 mb-4 pacifico">Sorta</h1>
+                <nav class="nav flex-column w-100">
+                    <a class="nav-link" href="#">January</a>
+                    <a class="nav-link" href="#">February</a>
+                    <a class="nav-link" href="#">March</a>
+                    <a class="nav-link" href="#">April</a>
+                    <a class="nav-link" href="#">May</a>
+                    <a class="nav-link" href="#">June</a>
+                    <a class="nav-link active" href="#">July</a>
+                    <a class="nav-link" href="#">August</a>
+                    <a class="nav-link" href="#">September</a>
+                    <a class="nav-link" href="#">October</a>
+                    <a class="nav-link" href="#">November</a>
+                    <a class="nav-link" href="#">December</a>
+                </nav>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-10">
+                <div class="search-bar d-flex justify-content-between align-items-center mb-33">
+                    <input type="text" class="form-control w-50" placeholder="Search Here">
+                    <div class="profile">
+                        <span>John Doe<br><small>Admin</small></span>
+                        <i class="fas fa-user-circle fa-2x ms-2"></i>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <span class="d-flex align-items-center">
+                                        File Name
+                                        <span class="d-flex flex-column align-items-center ms-1 sort-icons">
+                                            <i class="bi bi-caret-up-fill"></i>
+                                            <i class="bi bi-caret-down-fill"></i>
+                                        </span>
+                                    </span>
+                                </th>
+                                <th>
+                                    <span class="d-flex align-items-center">
+                                        Uploaded At
+                                        <span class="d-flex flex-column align-items-center ms-1 sort-icons">
+                                            <i class="bi bi-caret-up-fill"></i>
+                                            <i class="bi bi-caret-down-fill"></i>
+                                        </span>
+                                    </span>
+                                </th>
+                                <th>Status</th>
+                                <th class="text-center">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>FREEBIES FOR METRO DEBUT GLITZ CHARM FABULOUS</td>
+                                <td>2024-07-26 09:08</td>
+                                <td class="status-signed">Signed</td>
+                                <td class="text-center"><i class="bi bi-trash-fill trash-icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Assigned Members</td>
+                                <td>2024-07-23 14:13</td>
+                                <td class="status-pending">For Signing</td>
+                                <td class="text-center"><i class="bi bi-trash-fill trash-icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td>CITY HEALTH OFFICE</td>
+                                <td>2024-07-21 11:16</td>
+                                <td class="status-signed">Signed</td>
+                                <td class="text-center"><i class="bi bi-trash-fill trash-icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td>99k Promo Print</td>
+                                <td>2024-07-21 10:34</td>
+                                <td class="status-pending">For Signing</td>
+                                <td class="text-center"><i class="bi bi-trash-fill trash-icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Assessment for 2nd Quarter Excel Sheet</td>
+                                <td>2024-07-15 14:27</td>
+                                <td class="status-pending">For Signing</td>
+                                <td class="text-center"><i class="bi bi-trash-fill trash-icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Assessment for Food Distribution</td>
+                                <td>2024-07-15 13:42</td>
+                                <td class="status-signed">Signed</td>
+                                <td class="text-center"><i class="bi bi-trash-fill trash-icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Health_Document</td>
+                                <td>2024-07-15 08:02</td>
+                                <td class="status-signed">Signed</td>
+                                <td class="text-center"><i class="bi bi-trash-fill trash-icon"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-controls d-flex justify-content-between align-items-center mt-3">
+                    <button class="btn btn-add">ADD NEW FILE</button>
+                    <nav>
+                        <ul class="pagination mb-0">
+                            <li class="page-item"><a class="page-link" href="#"><i class="bi bi-arrow-left-circle"></i></a></li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#"><i class="bi bi-arrow-right-circle"></i></a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
