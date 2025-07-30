@@ -31,15 +31,20 @@ body {
   background-color: white;
   border-radius: 20px;
   padding-top: 30px;
-  position: fixed;
-  width: 200px;
-  height: calc(100vh - 60px); /* 30px top + 30px bottom */
-  overflow-y: auto;
+  position: absolute;
   top: 30px;
-  bottom: 30px;
+  bottom: 0px;
+  left: 55px; /* align with your side-space left margin */
+  width: 200px;
+  height: auto; /* let top and bottom define it */
+  overflow-y: auto;
   flex-shrink: 0;
   flex-grow: 0;
   margin: 0;
+}
+
+.container-fluid {
+  position: relative;
 }
 
 .sidebar .nav-link {
