@@ -16,6 +16,11 @@ body {
   margin-bottom: 33px !important;
 }
 
+.main-content {
+  height: 92vh;
+  flex-grow: 1;
+}
+
 .side-space {
   margin: 0 55px 0 55px;
 }
@@ -24,9 +29,15 @@ body {
   background-color: white;
   border-radius: 20px;
   padding-top: 30px;
-  height: 92vh;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  position: fixed;
+  width: 200px;
+  height: calc(100vh - 60px); /* 30px top + 30px bottom */
+  overflow-y: auto;
+  top: 30px;
+  bottom: 30px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  margin: 0;
 }
 
 .sidebar .nav-link {
@@ -63,9 +74,13 @@ body {
   background: white;
   border-radius: 12px;
   padding: 1rem;
-  margin-top: 1rem;
   margin: 0 auto;
   width: 95%;
+  height: 70.3vh; /* Adjust this as needed based on your screen */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden; /* prevents breaking layout on zoom */
 }
 
 .table-controls {

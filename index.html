@@ -14,37 +14,41 @@
 
 <body>
 <div class="container-fluid">
-        <div class="row side-space">
-            <!-- Sidebar --> 
-            <div class="col-md-2 sidebar d-flex flex-column align-items-start">
-                <h1 class="text-center w-100 mb-4 pacifico">Sorta</h1>
-                <nav class="nav flex-column w-100">
-                    <a class="nav-link" href="#">January</a>
-                    <a class="nav-link" href="#">February</a>
-                    <a class="nav-link" href="#">March</a>
-                    <a class="nav-link" href="#">April</a>
-                    <a class="nav-link" href="#">May</a>
-                    <a class="nav-link" href="#">June</a>
-                    <a class="nav-link active" href="#">July</a>
-                    <a class="nav-link" href="#">August</a>
-                    <a class="nav-link" href="#">September</a>
-                    <a class="nav-link" href="#">October</a>
-                    <a class="nav-link" href="#">November</a>
-                    <a class="nav-link" href="#">December</a>
-                </nav>
+    <div class="row flex-nowrap side-space">
+        <!-- Sidebar --> 
+        <div class="col-auto sidebar d-flex flex-column align-items-start">
+            <h1 class="text-center w-100 mb-4 pacifico">Sorta</h1>
+            <nav class="nav flex-column w-100">
+                <a class="nav-link" href="#">January</a>
+                <a class="nav-link" href="#">February</a>
+                <a class="nav-link" href="#">March</a>
+                <a class="nav-link" href="#">April</a>
+                <a class="nav-link" href="#">May</a>
+                <a class="nav-link" href="#">June</a>
+                <a class="nav-link active" href="#">July</a>
+                <a class="nav-link" href="#">August</a>
+                <a class="nav-link" href="#">September</a>
+                <a class="nav-link" href="#">October</a>
+                <a class="nav-link" href="#">November</a>
+                <a class="nav-link" href="#">December</a>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="col main-content d-flex flex-column" style="height: 92vh; margin-left: 200px;">
+            <!-- Search Bar -->
+            <div class="search-bar d-flex justify-content-between align-items-center mb-3">
+                <input type="text" class="form-control w-50" placeholder="Search Here">
+                <div class="profile">
+                    <span>John Doe<br><small>Admin</small></span>
+                    <i class="fas fa-user-circle fa-2x ms-2"></i>
+                </div>
             </div>
 
-            <!-- Main Content -->
-            <div class="col-md-10">
-                <div class="search-bar d-flex justify-content-between align-items-center mb-33">
-                    <input type="text" class="form-control w-50" placeholder="Search Here">
-                    <div class="profile">
-                        <span>John Doe<br><small>Admin</small></span>
-                        <i class="fas fa-user-circle fa-2x ms-2"></i>
-                    </div>
-                </div>
-
-                <div class="table-container">
+            <!-- Table & Controls -->
+            <div class="table-container d-flex flex-column justify-content-between" style="flex-grow: 1;">
+                <!-- Scrollable Table -->
+                <div style="overflow-y: auto;">
                     <table class="table">
                         <thead>
                             <tr>
@@ -117,7 +121,8 @@
                     </table>
                 </div>
 
-                <div class="table-controls d-flex justify-content-between align-items-center mt-3">
+                <!-- Add + Pagination (Lower Segment) -->
+                <div class="d-flex justify-content-between align-items-center mt-3">
                     <button class="btn btn-add">ADD NEW FILE</button>
                     <nav>
                         <ul class="pagination mb-0">
@@ -128,10 +133,10 @@
                         </ul>
                     </nav>
                 </div>
-
             </div>
         </div>
     </div>
-
+</div>
 </body>
+
 </html>
