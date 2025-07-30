@@ -17,8 +17,10 @@ body {
 }
 
 .main-content {
-  height: 92vh;
-  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  height: 96vh;
+  margin-left: 200px;
 }
 
 .side-space {
@@ -75,8 +77,9 @@ body {
   border-radius: 12px;
   padding: 1rem;
   margin: 0 auto;
-  width: 95%;
-  height: 70.3vh; /* Adjust this as needed based on your screen */
+  width: 99.4%;
+  flex: 1;
+  min-height: 0; /* allows shrinking inside flexbox */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
