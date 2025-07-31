@@ -68,7 +68,7 @@
                 <div class="modal-content">
                     <p>Are you sure you want to log out?</p>
                     <div class="d-flex justify-content-around mt-3">
-                        <button id="confirmLogout" class="btn btn-primary">Log Out</button>
+                        <button id="confirmLogout" class="btn submit-btn">Log Out</button>
                         <button id="cancelLogout" class="btn btn-secondary">Cancel</button>
                     </div>
                 </div>
@@ -152,7 +152,7 @@
 
                 <!-- Add + Pagination (Lower Segment) -->
                 <div class="d-flex justify-content-between align-items-center mt-3">
-                    <button class="btn btn-add">ADD NEW FILE</button>
+                    <button class="btn btn-add" id="addFileBtn">ADD NEW FILE</button>
                     <nav>
                         <ul class="pagination mb-0">
                             <li class="page-item"><a class="page-link" href="#"><i class="bi bi-chevron-left"></i></a></li>
@@ -163,37 +163,23 @@
                         </ul>
                     </nav>
                 </div>
+                <!-- Add New File Modal -->
+                <div id="addFileModal" class="modal">
+                    <div class="add-file-box position-relative">
+                        <!-- Close Button -->
+                        <button type="button" id="closeAddFileModal" class="close-btn">&times;</button>
+                        <h5 class="mb-3">File Name</h5>
+                        <input type="text" class="form-control mb-4" placeholder="File Name" id="fileNameInput">
+                        <button class="btn submit-btn w-100" id="submitFileBtn">Submit</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-<!-- JavaScript for Logout | Quick Code in for Demo Logout Button | Remove if it isn't needed -->
+<script src="assets/js/dashboard.js"></script>
 
-<script>
-  const logoutBtn = document.getElementById("logoutBtn");
-  const logoutModal = document.getElementById("logoutModal");
-  const confirmLogout = document.getElementById("confirmLogout");
-  const cancelLogout = document.getElementById("cancelLogout");
-
-  logoutBtn.addEventListener("click", () => {
-    logoutModal.style.display = "block";
-  });
-
-  cancelLogout.addEventListener("click", () => {
-    logoutModal.style.display = "none";
-  });
-
-  confirmLogout.addEventListener("click", () => {
-    window.location.href = "login.html";
-  });
-
-  // Close modal if user clicks outside of it
-  window.addEventListener("click", (e) => {
-    if (e.target === logoutModal) {
-      logoutModal.style.display = "none";
-    }
-  });
 </script>
 
 </body>

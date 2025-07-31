@@ -122,6 +122,24 @@ body {
   text-align: center;
 }
 
+.add-file-box {
+  background: #fff;
+  padding: 60px;
+  border-radius: 12px;
+  width: 400px;
+  height: 380px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* NEW: Center inner content */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch; /* full width of container */
+}
+
 .table-container {
   background: white;
   border-radius: 12px;
@@ -135,7 +153,6 @@ body {
   justify-content: space-between;
   overflow: hidden; /* prevents breaking layout on zoom */
 }
-
 
 .table td, .table th {
   padding-top: 1rem;
@@ -192,6 +209,37 @@ body {
 .btn-add:active {
   background-color: #242a7c !important;
   color: white !important;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+
+.submit-btn {
+  background-color: #3B4CB8;
+  color: white !important;
+  font-weight: 500;
+}
+
+.submit-btn:hover {
+  background-color: #2f3aa1;
+}
+
+.submit-btn:active {
+  background-color: #242a7c !important;
 }
 
 .pagination .page-link {
