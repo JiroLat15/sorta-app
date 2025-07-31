@@ -1,5 +1,8 @@
 body {
   background: linear-gradient(to bottom, #adb0f4, #686fcb);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   font-family: 'Segoe UI', sans-serif;
 }
 
@@ -68,15 +71,21 @@ body {
   border-radius: 8px;
 }
 
+.custom-search-width {
+  width: 40%;
+  max-width: none; /* or any width you want */
+  min-width: 50px; /* optional */
+}
+
 .btn-search {
-  background-color: #3a3fcc;
-  color: white;
+  background-color: white;
+  color: #3a3fcc;
   border: 1px solid white;
 }
 
 .btn-search:hover {
-  background-color: #2e35a3;
-  color: white;
+  background-color: #adb3ff;
+  color: #3a3fcc;
   border: 1px solid white;
 }
 
@@ -105,6 +114,12 @@ body {
   overflow: hidden; /* prevents breaking layout on zoom */
 }
 
+
+.table td, .table th {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .table-controls {
   width: 95%;
   margin: 1rem auto 0 auto; /* adds top spacing, centers horizontally */
@@ -119,6 +134,7 @@ body {
 .trash-icon {
   color: #e70000;
   cursor: pointer; /* Optional: adds pointer cursor on hover */
+  font-size: 1.4rem;
 }
 
 .trash-icon:active {
@@ -223,8 +239,11 @@ body {
 }
 
 .table-scroll {
+  flex-grow: 1;
   overflow-y: auto;
-  max-height: 400px;
+  max-height: none;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 
