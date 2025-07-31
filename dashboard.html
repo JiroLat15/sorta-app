@@ -48,12 +48,29 @@
                         <i class="bi bi-search"></i>
                     </button>
                 </div>
-                <div class="profile d-flex align-items-center gap-2">
-                    <div class="d-flex flex-column text-end">
-                        <span class="fw-semibold">John Doe</span>
-                        <small class="text-lighter">Admin</small>
+                <div class="d-flex align-items-center gap-3">
+                    <!-- Profile -->
+                    <div class="profile d-flex align-items-center gap-2">
+                        <div class="d-flex flex-column text-end">
+                            <span class="fw-semibold">John Doe</span>
+                            <small class="text-lighter">Admin</small>
+                        </div>
+                        <img src="assets/Images/Profile Picture.jpg" alt="Profile Picture" class="rounded-circle" width="40" height="40">
                     </div>
-                    <img src="assets/Images/Profile Picture.jpg" alt="Profile Picture" class="rounded-circle" width="40" height="40">
+                    <!-- Logout Button -->
+                    <button id="logoutBtn" class="btn btn-danger d-flex align-items-center gap-1">
+                        <i class="bi bi-box-arrow-right"></i> Logout
+                    </button>
+                </div>
+            </div>
+            <!-- Logout Modal -->
+            <div id="logoutModal" class="modal">
+                <div class="modal-content">
+                    <p>Are you sure you want to log out?</p>
+                    <div class="d-flex justify-content-around mt-3">
+                        <button id="confirmLogout" class="btn btn-primary">Log Out</button>
+                        <button id="cancelLogout" class="btn btn-secondary">Cancel</button>
+                    </div>
                 </div>
             </div>
 
@@ -150,6 +167,35 @@
         </div>
     </div>
 </div>
+
+<!-- JavaScript for Logout | Quick Code in for Demo Logout Button | Remove if it isn't needed -->
+
+<script>
+  const logoutBtn = document.getElementById("logoutBtn");
+  const logoutModal = document.getElementById("logoutModal");
+  const confirmLogout = document.getElementById("confirmLogout");
+  const cancelLogout = document.getElementById("cancelLogout");
+
+  logoutBtn.addEventListener("click", () => {
+    logoutModal.style.display = "block";
+  });
+
+  cancelLogout.addEventListener("click", () => {
+    logoutModal.style.display = "none";
+  });
+
+  confirmLogout.addEventListener("click", () => {
+    window.location.href = "login.html";
+  });
+
+  // Close modal if user clicks outside of it
+  window.addEventListener("click", (e) => {
+    if (e.target === logoutModal) {
+      logoutModal.style.display = "none";
+    }
+  });
+</script>
+
 </body>
 
 </html>

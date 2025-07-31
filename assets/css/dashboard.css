@@ -100,6 +100,28 @@ body {
   text-align: right;
 }
 
+/* Modal Styling */
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 300px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
 .table-container {
   background: white;
   border-radius: 12px;
